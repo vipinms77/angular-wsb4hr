@@ -23,15 +23,15 @@ export class AppComponent  {
       let right = arr.length - 1;
       arr.sort();
       while (left <= right) {
-          const mid = left + Math.floor((right - left) / 2);
-          if (arr[mid] == search) {
-              return true;
-          }
-          if (arr[mid] < search) {
-              left = mid + 1;
-          } else {
-              right = mid - 1;
-          }
+        const mid = left + Math.floor((right - left) / 2);
+        if (arr[mid] == search) {
+            return true;
+        }
+        if (arr[mid] < search) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
       }
       return false;
   }
