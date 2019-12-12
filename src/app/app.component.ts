@@ -12,7 +12,7 @@ export class AppComponent  {
   result: boolean;
   onClick(){
     if(this.numberString.trim()){
-      this.array = this.numberString.split(',');
+      this.array = this.numberString.split(',').map(x=>x.trim());
       if(this.array.length > 0 && this.search){
         this.result = this.binarySearch(this.array,this.search);
       }
